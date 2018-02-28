@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Салон красоты DREAM</title>
+        <link href="style.css" rel="stylesheet">
+        <script async src="javascript.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAk0e-uZZaq3wL0Nmmm3bwtO_vms7OQrzQ",
+    authDomain: "dream-1cd29.firebaseapp.com",
+    databaseURL: "https://dream-1cd29.firebaseio.com",
+    projectId: "dream-1cd29",
+    storageBucket: "dream-1cd29.appspot.com",
+    messagingSenderId: "1076155968459"
+  };
+  firebase.initializeApp(config);
+</script>
+<script async src="javas.js"></script>
+<style type="text/css">
+#entrance{
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    float: right;
+    position: relative;
+    top: 20px;
+    left: 250px;
+}
+
+#exit {
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    top: -30px;
+    left: 240px;
+}
+</style>
+    </head>
+    <body>
+        <div class="layout-positioner">
+        <div class="header">
+            <a href="#"><img class="logo" src="image/logo.png" alt="Салон красоты DREAM"></a>
+            <div class="forma">
+                <form id="form" >
+                  <p class="input">
+                        <input type="e-mail" id="auth_login" name="e-mail" placeholder="E-mail">
+                    </p>
+                    <p class="input">
+                        <input type="password" title="Не менее 6 знаков, в том числе хотя бы одна цифра и буква" id="auth_password" name="passpword" placeholder="Password">
+                    </p>
+                    <p id="submit">
+                        <input type="button" id="sing-in"  value="Войти">
+                        <input type="button" id="sing-up"  value="Зарегистрироваться">
+                    </p>
+                </form>
+            </div>
+               <div id="entrance">
+                    <h2> Привет,<code id="quickstart-account-details">Человек</code></h2>
+                    <input type="button" id="exit"  value="Выйти">
+                </div>
+        </div>
+       <nav class="menu">
+           <ul>
+          <li class="current"><a href="#">Главная</a></li>
+          <li><a href="#">Наши работы</a></li>
+          <li><a href="#">Контакты</a></li>
+           </ul>
+        </nav>
+        <div class="content">
+        <div class="content-left">
+        <h1 id="salon">О САЛОНЕ</h1>
+        <p id="p_content">В DREAM красота не требует жертв, но заслуживает бережного и природного отношения. Каждый клиент нашего салона несет в мир заряд здоровья, бодрости, нежности, заботы и благодарности, рассказывая миру свою историю красоты.</p>
+        <div class="image">
+            <img width="200px" src="image/04.jpg" alt="Девушка">
+        </div>
+        <h1 id="services">УСЛУГИ</h1>
+           <ul>
+            <li>RF ЛИФТИНГ</li>
+            <li>ЛИЦО</li>
+            <li>ТЕЛО</li>
+            <li>ВОЛОСЫ</li>
+            <li>РУКИ И НОГИ</li>
+            </ul>
+        <h1 id="services">КЛУБНАЯ СИСТЕМА</h1>
+        <p id="p_content">Каждому посетителю, который воспользуется одной из предлагаемых в салоне услуг, администратор презентует клубную, накопительную карточку.</p>
+        <p id="p_content">Но самое главное и приятное в этой клубной системе то, что скидки начинают сыпаться уже с первого посещения!!!</p>
+        <p id="p_content">Но и это ещё не всё! Карточка является семейной, все посещения суммируются, и сумма скидки увеличивается после каждого посещения. Пользуйтесь нашими бонусными карточками на здоровье!</p>
+        </div>
+        <div class="side_bar" id="side_barr">
+            <a href="#salon">О салоне</a><br>
+            <a href="#services">Услуги</a><br>
+            <a href="#club">Клубная система</a><br>
+            <input  class="click" id="burger" type="button" onClick="showElement('sidebar')" value="НАЖМИ НА МЕНЯ!" >
+        </div>
+        <div id="sidebar" style="display: none">
+           <h4>Работа с контентом</h4>
+            <p>
+                 <label for="font_Size">Размер шрифта:</label><br>
+                 <input type="text" id="font_Size" name="font-Size">
+            </p>
+            <p>
+                <label for="color_background">Выбирите цвет фона:</label><br>
+                <input type="color" id="color_background" name="Color-backgrount"  value="#fff">
+            </p>
+            <p onclick="onclickRadio()">
+                <label for="Font_Family">Выберите шрифт:</label><br>
+                <input type="radio" name="family" id="font-family1"  value="Tahoma">
+                <label for="font-family1">Tahoma</label>
+                <input type="radio" name="family" id="font-family2" value="Times">
+                <label for="font-family2">Times</label>
+                <input type="radio" name="family" id="font-family3" value="Georgia">
+                <label for="font-family3">Georgia</label>
+            </p>
+            <p>
+                <label for="remove_p">Удалить последний тег p?</label><br>
+                <input type="button"  id="remove_p"  value="Удалить!">
+            </p>
+        </div>
+        </div>
+        <div class="footer">
+           &copy; 2018 — Салон красоты DREAM
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #f5f5f5;
+    font: 100% Arial;
+    color: 555;
+    line-height: 1.3;
+}
+.layout-positioner{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header{
+    padding: 30px 0 0 0;
+    margin-bottom: 20px;
+    background: #8B008B;
+    overflow: hidden;
+    min-height: 120px;
+}
+.header .logo{
+    margin: 0 40px 20px 40px;
+    display: block;
+    float: left;
+}
+
+.header .forma {
+    width: 400px;
+    min-height: 60px;
+    float: right;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    color: white;
+}
+.header .forma .input {
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+.header .forma input[type=e-mail],
+.header .forma input[type=password] {
+    font-size: 12px;
+    display: block;
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 2px solid #ebe6e2;
+    border-radius: 3px;
+}
+
+.header .forma input[type=e-mail]:hover,
+.header .forma input[type=password]:hover {
+    border-color: #CCC;
+}
+.header .forma input[type=e-mail]:focus,
+.header .forma input[type=password]:focus {
+    border-color: grey;
+    outline: none; 
+}
+
+.header .forma input[type=e-mail]::-webkit-input-placeholder,
+.header .forma input[type=password]::-webkit-input-placeholder
+{ 
+    opacity: 0.3; 
+}
+ .header.forma .submit {
+    display: inline-block;
+    margin: 0;
+    margin-left: 10px;
+}
+.header .forma input[type=submit]:hover, input[type=button]:hover
+{
+    border-color: red;
+}
+.header .forma input[type=submit], 
+input[type=button]{
+    width: 160px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    border: 2px solid #ebe6e2;
+    color: white;
+    background: Crimson;
+}
+
+ .header .forma input[type=submit]{
+    float: left;
+    position: relative;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.menu {
+    position: relative;
+    top: -50px;
+    left: 80px;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+.menu li {
+	margin: 0 15px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; 
+}
+.menu a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #fff;
+	line-height: 100%;
+}
+.menu a:hover {
+	color: #FF0000;
+}
+.nav .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 3px;
+}
+.menu.right ul {
+	text-align: right;
+}
+ 
+.menu.center ul {
+	text-align: center;
+}
+
+.content{
+        overflow: hidden;
+}
+.content h1{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: green;
+}
+.content p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.content img{
+    margin-bottom: 20px;
+}
+.content-left{
+    padding: 2%;
+    width: 60%;
+    float: left;
+}
+.content ul{
+    margin: 20px;
+    list-style-type: circle;
+}
+.side_bar, #sidebar{
+    width: 30%;
+    padding: 2%;
+    margin-bottom: 2%;
+    float: right;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #CCCCCC;
+}
+.side_bar a{
+    color: mediumblue;
+    line-height: 2;
+    font-style: italic;
+    text-decoration: none;
+}
+.side_bar a:visited{
+    color: #882ea0;
+}
+.side_bar a:active{
+    border-bottom: 1px solid black;
+}
+
+.footer{
+    padding: 2%;
+    color: #d8d8d9;
+    background-color: #8B008B;
+}
+@media screen and (max-width: 800px){
+    .header .logo{
+        margin: 0 auto;
+    }
+    .content-left{
+    padding: 2%;
+    width: 94%;
+    float: none;
+    }
+    .side_bar, #sidebar{
+    float: none;
+    width: 93%;
+    margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 660px){
+    .header{
+        min-height: 200px;
+    }
+    .header .logo{
+        float:none;
+        margin-bottom: 10px;
+    }
+    .header .forma{
+        float: none;
+        margin: 0 auto;
+    }
+    .menu {
+		position: relative;
+		min-height: 40px;
+        left: 20px;
+	}	
+	.menu ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #8B008B 10px 11px;
+		border-radius: 5px;
+	}
+	.menu li {
+		display: none;
+		margin: 0;
+	}
+	.menu .current {
+		display: block;
+	}
+	.menu a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.menu .current a {
+		color: #fff;
+	}
+	.menu ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+	.menu.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+ 
+}
